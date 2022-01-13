@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/home', ['App\Http\Controllers\ImageController','home']);
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -12,8 +12,6 @@
 </head>
 <body>
     @include('navigation.header')
-
-    @include('navigation.navigation')
     
     <div style="height: 1500px" class="jumbotron">
         @yield('content')
