@@ -17,17 +17,14 @@ use App\Http\Controllers\UserController;
 Route::get('/home', ['App\Http\Controllers\ImageController','home']);
 
 Route::get('/', function () {
-    return view('loginPage');
+    return view('home');
 });
 Route::get('/loginPage', function () {
     return view('loginPage');
-});
-
-Route::post('/loginUser', [UserController::class, 'loginUser']);
-
-Route::get('/loginPage', function () {
-    return view('login');
 });
 Route::get('/registerPage', function () {
     return view('register');
 });
+
+Route::post('/loginUser', [UserController::class, 'loginUser']);
+Route::get('/logout', [UserController::class, 'logout']);

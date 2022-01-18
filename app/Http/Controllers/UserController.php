@@ -43,6 +43,10 @@ class UserController extends Controller
     public function loginPage(){
         return view('login');
     }
+    public function logout(){
+        Auth::logout();
+        return redirect('/home');
+    }
 
     public function loginUser(Request $req){
         $credentials = [

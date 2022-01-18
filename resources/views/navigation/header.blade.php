@@ -4,8 +4,15 @@
     </div>
     <div class="d-flex">
         
+        @auth
+            @if (Auth::user()->role == 'member')
+        @endauth
+        <form action="/logout">
+        <button type="submit" class="mt-2 btn btn-ligh">logout</button>
+        </form>        
+        @else                   
         <form action="/loginPage">
-            <button type="submit" class="mt-2 btn btn-light" href="#divOne">login</button>
+            <button type="submit" class="mt-2 btn btn-light">login</button>
             {{-- <button type="button" class="mt-2 btn btn-light" data-toggle="modal" data-target="#myModal">
             Login Form
           </button> --}}
@@ -13,6 +20,7 @@
           <form action="/register">
             <button type="submit" class="mt-2 btn btn-light">Register</button>
         </form>
+        @endif
     </div>
 
 
