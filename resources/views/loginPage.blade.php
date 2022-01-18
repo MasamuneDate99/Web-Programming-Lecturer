@@ -7,9 +7,11 @@
 <div class="d-flex justify-content-center">
     <form action="/loginUser" method="POST">
         @csrf
-        <input type="email" name="email" placeholder="Email">
+        <input type="email" name="email" placeholder="Email" 
+        value="{{Cookie::get('email') != null? Cookie::get('email') : ""}}">
         <br>
-        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password" placeholder="Password"
+        value="{{Cookie::get('password') != null? Cookie::get('password') : ""}}">
         <br>
         <input type="checkbox" name="remember" id=""> Remember Me
         <br>
