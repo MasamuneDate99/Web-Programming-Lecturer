@@ -19,7 +19,7 @@ class CreateUsersTableData extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('role')->default('member');
-            $table->foreignId('like_id')->references('id')->on('image')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('like_id')->references('id')->on('images')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
