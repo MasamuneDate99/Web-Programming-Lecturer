@@ -37,15 +37,24 @@
                     <div class="card-body">
                       <h5 class="card-title">Skadi</h5>
                       <p class="card-text">Skadi Bounty Hunter</p>
-                      <a href="#" class="like-counter">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
-                            <script>
-                                document.getElementById("clicks").innerHTML = clicks;
-                                    $('.like-counter').click(function() {
-                                    clicks += 1;
+                        @auth
+                            @if (Auth::user()->role == 'member') 
+                        @endauth
+                            <a href="#" class="like-counter">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
+                                <script>
+                                    var clicks = 15;
                                     document.getElementById("clicks").innerHTML = clicks;
-                                    $('.like-counter').addClass("liked");
-                                });
-                            </script>
+                                        $('.like-counter').click(function() {
+                                        clicks += 1;
+                                        document.getElementById("clicks").innerHTML = clicks;
+                                        $('.like-counter').addClass("liked");
+                                    });
+                                </script>                             
+                            @else
+                            <div class="hoverlike">
+                                <a href="#" class="like-counter">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
+                            </div>
+                            @endif
                     </div>
                   </div>
     </div>
@@ -57,16 +66,25 @@
                 <div class="card-body">
                   <h5 class="card-title">Hehe Dino</h5>
                   <p class="card-text">Download Like a Dino in app store or playstore</p>
+                  @auth
+                    @if (Auth::user()->role == 'member')
+                  @endauth
                   <a href="#" class="like-counterB">&hearts;Like</a><span class="click-textB"><a id="clicksB"></span>
-                        <script>
-                        var clicksB = 18;
-                        document.getElementById("clicksB").innerHTML = clicksB;
-                            $('.like-counterB').click(function() {
-                            clicksB += 1;
+                    <script>
+                    var clicksB = 18;
                             document.getElementById("clicksB").innerHTML = clicksB;
-                            $('.like-counterB').addClass("likedB");
-                        });
-                        </script>
+                                $('.like-counterB').click(function() {
+                                clicksB += 1;
+                                document.getElementById("clicksB").innerHTML = clicksB;
+                                $('.like-counterB').addClass("likedB");
+                            });
+                    </script>
+                  @else
+                        <div class="hoverlike">
+                            <a href="#" class="like-counterB">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
+                        </div>
+                  @endif
+                  
                 </div>
               </div>
         </div>

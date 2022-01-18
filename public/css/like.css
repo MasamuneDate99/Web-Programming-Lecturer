@@ -4,6 +4,7 @@
 }
 .liked{
     font-weight: bold;
+    font-size: 21px;
 }
 .like-counterB{
     text-decoration: none;
@@ -11,4 +12,31 @@
 }
 .likedB{
     font-weight: bold;
+    font-size: 21px;
+}
+
+.like-counter{
+    -webkit-transition: color 2s;
+    transition: color 2s;
+}
+.like-counter:hover {
+    color: red;
+}
+.like-counterB{
+    -webkit-transition: color 2s;
+    transition: color 2s;
+}
+.like-counterB:hover {
+    color: red;
+}
+
+.hoverlike:hover span{
+    display:none;
+}
+.hoverlike:hover:before{
+    content: "Login First !";
+    color: red;
+}
+.liked{
+    font-size: 21px;
 }
