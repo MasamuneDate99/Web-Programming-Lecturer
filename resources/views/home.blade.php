@@ -19,6 +19,7 @@
             <img width="200" class="card-img-top{{Storage::url($image->image)}}" alt="{{$image->name}}">
             <div class="card-body">
                 <h5 class="card-title">{{$image->name}}</h5>
+                <button class="btn btn-danger">like</button>
             </div>
         </div>
         @endforeach
