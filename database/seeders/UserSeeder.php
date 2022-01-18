@@ -15,25 +15,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'Valerius Robert',
-            'email' => 'Syn@gmail.com',
-            'password' => Hash::make('Synch02'),
-            'like_id' => '1',
-        ]);
-        DB::table('users')->insert([
-            'name' => 'Nathaniel Davin',
-            'email' => 'date@gmail.com',
-            'password' => Hash::make('12345678'),
-            'like_id' => '1',
-        ]);
-        DB::table('users')->insert([
-            'name' => 'Antonius Cipta',
-            'email' => 'anton@gmail.com',
-            'password' => Hash::make('12345678'),
-            'like_id' => '1',
-        ]);
-
         DB::table('image')->insert([
             'name' => 'Foto Keluarga 1',
             'description' => 'Foto Keluarga 1',
@@ -78,6 +59,22 @@ class UserSeeder extends Seeder
             'name' => 'Foto Keluarga 9',
             'description' => 'Foto Keluarga 9',
             'image' => 'storage/image-9.jpg',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Valerius Robert',
+            'email' => 'Syn@gmail.com',
+            'password' => Hash::make('Synch02'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Nathaniel Davin',
+            'email' => 'date@gmail.com',
+            'password' => Hash::make('12345678'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Antonius Cipta',
+            'email' => 'anton@gmail.com',
+            'password' => Hash::make('12345678'),
         ]);
     }
 }
