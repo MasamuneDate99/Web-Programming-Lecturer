@@ -1,6 +1,6 @@
 @extends('navigation.master')
 
-@section('title', '[DY.ID] Home')
+@section('title', 'Home')
 
 @section('content')
 <!DOCTYPE html>
@@ -13,7 +13,16 @@
     <title>Home</title>
 </head>
 <body>
-    <main class = "d-flex flex-direction-row flex-wrap justify-content-center"></main>
+    <main class = "d-flex flex-direction-row flex-wrap justify-content-center">
+        @foreach ($images as $image)
+        <div class="card m-2 bg-white text-black border border-warning col-md-3" style="width: 18rem;">
+            <img width="200" class="card-img-top{{Storage::url($image->image)}}" alt="{{$image->name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{$image->name}}</h5>
+            </div>
+        </div>
+        @endforeach
+    </main>
 </body>
 </html>
 
