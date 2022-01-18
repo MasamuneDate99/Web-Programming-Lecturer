@@ -20,3 +20,10 @@ Route::get('/', function () {
 });
 
 Route::post('/loginUser', [UserController::class, 'loginUser']);
+
+Route::get('/loginPage', function () {
+    return view('login');
+});
+Route::get('/registerPage', function () {
+    return view('register');
+});
