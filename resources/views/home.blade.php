@@ -27,7 +27,7 @@
         @endforeach
     </main> --}}
     @auth
-        <h1>Sup ! {{Auth::user()->name}}</h1>
+        <h1 style="text-align: center">Sup {{Auth::user()->name}} !</h1>
     @endauth
     <div class="d-flex justify-content-center">
             <div>
