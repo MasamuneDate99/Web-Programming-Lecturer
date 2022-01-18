@@ -1,0 +1,14 @@
+.like-counter{
+    text-decoration: none;
+    margin-right: 5px;
+}
+.liked{
+    font-weight: bold;
+}
+.like-counterB{
+    text-decoration: none;
+    margin-right: 5px;
+}
+.likedB{
+    font-weight: bold;
+}
