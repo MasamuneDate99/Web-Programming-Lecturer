@@ -17,47 +17,47 @@ class ImageSeeder extends Seeder
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 1',
             'description' => 'Foto Keluarga 1',
-            'image' => 'storage/image-1.jpg',
+            'image' => 'storage/image_1.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 2',
             'description' => 'Foto Keluarga 2',
-            'image' => 'storage/image-2.png',
+            'image' => 'storage/image_2.png',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 3',
             'description' => 'Foto Keluarga 3',
-            'image' => 'storage/image-3.jpg',
+            'image' => 'storage/image_3.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 4',
             'description' => 'Foto Keluarga 4',
-            'image' => 'storage/image-4.jpg',
+            'image' => 'storage/image_4.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 5',
             'description' => 'Foto Keluarga 5',
-            'image' => 'storage/image-5.jpg',
+            'image' => 'storage/image_5.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 6',
             'description' => 'Foto Keluarga 6',
-            'image' => 'storage/image-6.jpg',
+            'image' => 'storage/image_6.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 7',
             'description' => 'Foto Keluarga 7',
-            'image' => 'storage/image-7.jpg',
+            'image' => 'storage/image_7.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 8',
             'description' => 'Foto Keluarga 8',
-            'image' => 'storage/image-8.jpg',
+            'image' => 'storage/image_8.jpg',
         ]);
         DB::table('images')->insert([
             'name' => 'Foto Keluarga 9',
             'description' => 'Foto Keluarga 9',
-            'image' => 'storage/image-9.jpg',
+            'image' => 'storage/image_9.jpg',
         ]);
     }
 }
