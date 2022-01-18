@@ -6,6 +6,9 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -35,5 +38,31 @@ class UserController extends Controller
         $user->save();
 
         return redirect('/login');
+    }
+
+    public function loginPage(){
+        return view('login');
+    }
+
+    public function loginUser(Request $req){
+        $credentials = [
+            'email' => $req->email,
+            'password' => $req->password,
+        ];
+
+        if($req->remember){
+            Cookie::queue('email', $req->email, 1);
+            Cookie::queue('password', $req->password, 1);
+        }
+    
+        if (Auth::attempt($credentials, true)) {
+            Session::put('credential', $credentials);
+            // Return redirect ke "Home" page nantinya
+            return redirect()->intended('home');
+        }
+    
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
 }

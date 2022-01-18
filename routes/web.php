@@ -18,3 +18,5 @@ Route::get('/home', ['App\Http\Controllers\ImageController','home']);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/loginUser', [UserController::class, 'loginUser']);
