@@ -16,6 +16,9 @@ use App\Http\Controllers\UserController;
 
 Route::get('/home', ['App\Http\Controllers\ImageController','home']);
 
+Route::get('/register', ['App\Http\Controllers\UserController', 'registerPage']);
+Route::post('/user', ['App\Http\Controllers\UserController','insertUser']);
+
 Route::get('/', function () {
     return view('home');
 });

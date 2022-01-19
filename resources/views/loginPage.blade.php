@@ -21,7 +21,7 @@
             </span>
          @endif
         <br>
-        <input type="submit" value="Login">
+        <input class="btn btn-dark text-light" type="submit" value="Login">
     </form>
 
 </div>
