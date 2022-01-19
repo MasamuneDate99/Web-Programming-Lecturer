@@ -52,7 +52,7 @@
                                 </script>                             
                             @else
                             <div class="hoverlike">
-                                <a href="#" class="like-counter">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
+                                <a href="#" class="like-counter text-danger">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
                             </div>
                             @endif
                     </div>
@@ -81,7 +81,7 @@
                     </script>
                   @else
                         <div class="hoverlike">
-                            <a href="#" class="like-counterB">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
+                            <a href="#" class="like-counterB text-danger">&hearts;Like</a><span class="click-text"><a id="clicks"></span>
                         </div>
                   @endif
                   
